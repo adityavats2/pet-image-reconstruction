@@ -2,7 +2,7 @@ torch
 torchvision
 numpy
 matplotlib
-opencv-python
+opencv-python-headless
 pillow
 tqdm
 streamlit
