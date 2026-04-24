@@ -3,10 +3,10 @@ from pathlib import Path
 
 import torch
 from PIL import Image, ImageDraw
+from torchvision import transforms
 from torchvision.transforms.functional import to_pil_image
 
 from src.config import ExperimentConfig
-from src.data.datasets import build_transform
 from src.data.preprocessing import get_blurred_edge_map, get_edge_map
 from src.models.cnn import SimpleCNN
 from src.models.gan import Generator
@@ -59,7 +59,12 @@ def preprocess_image(image_path: Path, config: ExperimentConfig) -> torch.Tensor
 
     with Image.open(image_path) as image:
         image = image.convert("RGB")
-        tensor = build_transform(config)(image)
+        tensor = transforms.Compose(
+            [
+                transforms.Resize(config.image_size),
+                transforms.ToTensor(),
+            ]
+        )(image)
 
     return tensor
 
