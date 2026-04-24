@@ -35,10 +35,10 @@ SAMPLE_IMAGE_OPTIONS = {
 
 def get_named_sample_image_path(paths, sample_name: str) -> Path:
     filename = SAMPLE_IMAGE_OPTIONS[sample_name]
-    sample_path = paths.data_dir / "oxford-iiit-pet" / "images" / filename
+    sample_path = paths.project_dir / "sample_inputs" / filename
     if not sample_path.exists():
         raise FileNotFoundError(
-            f"Sample image not found: {filename}. Add the Oxford-IIIT Pet dataset or upload your own image."
+            f"Sample image not found: {filename}. Add it to sample_inputs/ or upload your own image."
         )
     return sample_path
 
