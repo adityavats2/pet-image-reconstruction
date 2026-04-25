@@ -2,7 +2,7 @@
 
 **A PyTorch image-to-image translation pipeline that reconstructs pet images from Canny edge maps using a CNN baseline and a GAN-based generator.**
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pet-image-reconstruction-drslg5zlv4c3m2tbjkaynl.streamlit.app/)
+[![Pet Image Reconstruction Demo](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pet-image-reconstruction-drslg5zlv4c3m2tbjkaynl.streamlit.app/)
 
 > Live demo note: this app is hosted on a free tier and may take around 30 seconds to wake up on the first visit.
 
