@@ -1,0 +1,9 @@
+# Force GitHub to recognize all Python files properly
+*.py linguist-detectable=true
+
+# If there are any residual notebook data/checkpoints, ignore them
+*.ipynb linguist-documentation=true
+*.json linguist-documentation=true
+
+# Ensure your Streamlit/CLI scripts are counted as Python
+streamlit_app.py linguist-detectable=true
