@@ -2,11 +2,9 @@
 
 **A PyTorch image-to-image translation pipeline that reconstructs pet images from Canny edge maps using a CNN baseline and a GAN-based generator.**
 
-[![Pet Image Reconstruction Demo](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://pet-image-reconstruction-drslg5zlv4c3m2tbjkaynl.streamlit.app/)
+_Live demo note: this app is hosted on the free tier of Streamlit and may take around 30 to 60 seconds to wake up on the first visit._
 
-> Live demo note: this app is hosted on a free tier and may take around 30 seconds to wake up on the first visit.
-
-![Original, edge map, CNN output, and GAN output comparison](assets/pug_1_comparison.png)
+**Live Demo:** [pet-image-reconstruction-drslg5zlv4c3m2tbjkaynl.streamlit.app](https://pet-image-reconstruction-drslg5zlv4c3m2tbjkaynl.streamlit.app/)
 
 ## Project Snapshot
 
@@ -26,7 +24,7 @@ This project explores whether sparse structural information from an edge map can
 
 The result is a compact image-to-image translation system that compares traditional reconstruction against generative modeling in a reproducible, demo-ready application.
 
-## Technical Approach
+## Technical Approach & Design Decisions
 
 ### Data Pipeline
 
@@ -164,6 +162,8 @@ The included visual comparison shows the full inference path:
 ```text
 Original Image -> Canny Edge Map -> CNN Output -> GAN Output
 ```
+
+![Original, edge map, CNN output, and GAN output comparison](assets/pug_1_comparison.png)
 
 ## Engineering Highlights
 
